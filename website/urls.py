@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from blog.views import student_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'student_list/$', student_list),
+    url(r'^student/$', student_list),
 ]
